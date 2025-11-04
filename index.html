@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шкільні новини</title>
+    <style>
+    :root{
+      --page-bg: #f6f8fa;
+    }
+
+       html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--page-bg);
+      position: relative;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0; 
+      background:
+        linear-gradient(to bottom, rgba(246,248,250,0) 0%, rgba(246,248,250,1) 75%),
+        url("./logo_key.png") center top / cover no-repeat;
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 75%);
+      mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,0.6) 35%, rgba(0,0,0,0) 75%);
+      pointer-events: none;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 10px;
+      font-size: 72px; 
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #22223b;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-shadow: 0 4px 16px rgba(34,34,59,0.12);
+    }
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #4a4e69;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 1px 4px rgba(74,78,105,0.08);
+}
+
+.post {
+    margin-bottom: 48px;
+}
+
+button {
+    display: block;
+    margin: 0 auto 16px auto;
+    background-color: #ffae00;
+    color: #222;
+    padding: 16px 22px;
+    font-size: 28px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: #000;
+    border-radius: 24px;
+    cursor: pointer;
+    max-width: 500px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: scale(0.95);
+    background-color: #ffc039;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 auto 24px auto;
+    max-width: 400px;
+    background-color: #fff6e0;
+    padding: 16px;
+    border-radius: 16px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ffe0a3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+a {
+    text-decoration:none
+}
+
+    </style>
+</head>
+<body>
+      <div class="page">
+    <h1> Шкільні новини</h1>
+    <h2>В останнє оновлено: <span id="last-updated">...</span></h2>
+    <script>
+        (function(){
+            var lm = document.lastModified;
+            var modified = lm ? new Date(lm) : new Date();
+            var now = new Date();
+            var diff = now - modified;
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            var text = days === 0 ? 'сьогодні' : (days === 1 ? '1 день тому' : days + ' днів тому');
+            var el = document.getElementById('last-updated');
+            if (el) el.textContent = text;
+        })();
+    </script>
+
+    <a class="button" href="News1.html">
+        <button>Test1. . ... .</button>
+    </a>
+    <p>description for Test1</p>
+
+    <a class="button" href="News2.html">
+        <button>Test2</button>
+    </a>
+    <p>description for Test2</p>
+
+    <a class="button" href="News3.html">
+        <button>Test3</button>
+    </a>
+    <p>description for Test3</p>
+
+    <a class="button" href="News4.html">
+        <button>Test4</button>
+    </a>
+    <p>description for Test4</p>
+
+    <a href="News5.html">
+        <button>Test5</button>
+    </a>
+    <p>description for Test5</p>
+  </div>
+
+</body>
+</html>

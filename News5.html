@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Testing5</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root{
+            --bg-1: #f5f8ff;
+            --bg-2: #ffffff;
+            --accent: #ffae00;
+            --muted: #6b7082;
+            --card-shadow: 0 10px 30px rgba(34,34,59,0.08);
+            --radius: 14px;
+        }
+
+        html,body{
+            height:100%;
+            margin:0;
+            font-family: "Inter", Arial, sans-serif;
+            background: linear-gradient(180deg,var(--bg-1) 0%, #fbfbff 60%);
+            color:#222;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        .wrap{
+            max-width: 920px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card{
+            background: var(--bg-2);
+            border-radius: var(--radius);
+            padding: 36px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(34,34,59,0.04);
+        }
+
+        header{
+            text-align: center;
+            margin-bottom: 18px;
+        }
+
+        h1{
+            margin: 0;
+            font-family: "Montserrat", "Inter", Arial, sans-serif;
+            font-size: 44px;
+            letter-spacing: 0.6px;
+            color: #22223b;
+        }
+
+        .meta{
+            color: var(--muted);
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .hero{
+            margin: 28px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(34,34,59,0.03);
+        }
+
+        .article-img{
+            display:block;
+            width:100%;
+            height: 420px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        figcaption{
+            text-align:center;
+            font-size:13px;
+            color:var(--muted);
+            padding: 10px 6px 0;
+        }
+
+        .content{
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #3b3f4a;
+            text-align: left;
+        }
+
+        .actions{
+            margin-top: 28px;
+            display:flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn{
+            display:inline-block;
+            background: var(--accent);
+            color:#111;
+            padding: 10px 18px;
+            border-radius: 10px;
+            text-decoration:none;
+            font-weight:600;
+            box-shadow: 0 6px 18px rgba(255,170,40,0.12);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            <header>
+                <h1>Testing1</h1>
+                <div class="meta">Автор: Шкільна команда</div>
+            </header>
+
+            <figure class="hero">
+                <img class="article-img" src="Random-Testing-In-Software-Testing-An-Overview.png" alt="Testing overview image">
+                <figcaption>Короткий підпис до зображення</figcaption>
+            </figure>
+
+            <article class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non arcu eu nibh cursus
+                    fermentum. Integer at nisl nec lorem porttitor aliquet. Sed vel pulvinar mi. Praesent
+                    volutpat, nunc vitae tincidunt dictum, sapien velit convallis lorem, vitae sodales augue
+                    sapien a lorem.
+                </p>
+
+                <p>
+                    Duis ut nisl ut arcu gravida efficitur. Aliquam erat volutpat. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas.
+                </p>
+            </article>
+
+            <div class="actions">
+                <a class="btn" href="index.html">← Повернутися до новин</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
