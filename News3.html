@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Testing3</title>
+    <title>Testing2</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
@@ -60,18 +60,21 @@
         }
 
         .hero{
-            margin: 28px auto;
-            border-radius: 12px;
+            margin: 28px 0;
             overflow: hidden;
-            border: 1px solid rgba(34,34,59,0.03);
+            position: relative;
+            display: block; 
         }
 
         .article-img{
-            display:block;
-            width:100%;
-            height: 420px;
+            display: block;
+            width: 100%;
+            height: auto;              
+            aspect-ratio: 16/9;  
             object-fit: cover;
             object-position: center;
+            margin: 0 auto;           
+            border-radius: 10px;
         }
 
         figcaption{
@@ -108,6 +111,21 @@
             box-shadow: 0 6px 18px rgba(255,170,40,0.12);
             border: 0;
         }
+        
+        @media (min-width: 769px) {
+            .article-img {
+                width: 90%;          
+                max-width: 1100px;    
+                aspect-ratio: 16/10;   
+                height: auto;
+                border-radius: 12px;
+                object-fit: cover;
+                box-shadow: 0 10px 32px rgba(34,34,59,0.10);
+                display: block;
+                margin: 0 auto;        
+            }
+        }
+               
     </style>
 </head>
 <body>
